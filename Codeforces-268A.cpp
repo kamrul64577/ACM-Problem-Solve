@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n,i,cnt=0;
+    cin>>n;
+    int a[n],b[n];
+    for(i=0; i<n; i++)
+    {
+        cin>>a[i]>>b[i];
+
+    }
+    for(i=0; i<n-1; i++)
+    {
+        for(int j=i+1; j<n; j++)
+        {
+            if(a[i]==b[j])
+                cnt++;
+            if(b[i]==a[j])
+                cnt++;
+        }
+    }
+    cout<<cnt;
+}
